@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: EasyWater_paodao2
+  m_Shader: {fileID: 4800000, guid: bec7f95857316e74f942e2adb45f11a5, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _BumpMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _BumpMap1
+      second:
+        m_Texture: {fileID: 2800000, guid: bde54cbe4813165438fd0d27549f6ae7, type: 3}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _BumpMap2
+      second:
+        m_Texture: {fileID: 2800000, guid: bde54cbe4813165438fd0d27549f6ae7, type: 3}
+        m_Scale: {x: 4, y: 4}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DistortionMap
+      second:
+        m_Texture: {fileID: 2800000, guid: 4e1f47d89e2b2a148b30e9ecd0189cea, type: 3}
+        m_Scale: {x: 25, y: 25}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DistortionMap1
+      second:
+        m_Texture: {fileID: 2800000, guid: 4e1f47d89e2b2a148b30e9ecd0189cea, type: 3}
+        m_Scale: {x: 60, y: 30}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DistortionMap2
+      second:
+        m_Texture: {fileID: 2800000, guid: 4e1f47d89e2b2a148b30e9ecd0189cea, type: 3}
+        m_Scale: {x: 40, y: 40}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Mask
+      second:
+        m_Texture: {fileID: 2800000, guid: 4a0f0bc87d7824e46aa97f5ca4ac218d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Reflection
+      second:
+        m_Texture: {fileID: 8900000, guid: fb8d791d6f13a704c8664acd760ecb95, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Texture1
+      second:
+        m_Texture: {fileID: 2800000, guid: 372f3b6291a146448856111f6295814b, type: 3}
+        m_Scale: {x: 5, y: 5}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Texture2
+      second:
+        m_Texture: {fileID: 2800000, guid: 84085cff9f6023044bc3a8e39991d366, type: 3}
+        m_Scale: {x: 6, y: 6}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _Bump1Speed
+      second: 0.21
+    - first:
+        name: _Bump2Speed
+      second: -0.18
+    - first:
+        name: _Cutoff
+      second: 0.18928573
+    - first:
+        name: _DistortionPower
+      second: 0.65
+    - first:
+        name: _DistortionSpeed
+      second: 2.06
+    - first:
+        name: _FakeLitIntensity
+      second: 5
+    - first:
+        name: _Gloss
+      second: 0.56
+    - first:
+        name: _MainTexSpeed
+      second: 0.18
+    - first:
+        name: _Opacity
+      second: 1.5
+    - first:
+        name: _ReflectPower
+      second: 0.8
+    - first:
+        name: _Shininess
+      second: 0.07
+    - first:
+        name: _Specular
+      second: 7
+    - first:
+        name: _Texture2Speed
+      second: -0.21
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 0.6397059, g: 0.9403651, b: 1, a: 1}
+    - first:
+        name: _FakeLitDir
+      second: {r: 53.21, g: 0.36, b: -0.6, a: 0}
+    - first:
+        name: _SpecColor
+      second: {r: 0.8602941, g: 0.7905739, b: 0.6135921, a: 1}

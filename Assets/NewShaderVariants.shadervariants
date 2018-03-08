@@ -1,0 +1,383 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: NewShaderVariants
+  m_Shaders:
+    data:
+      first: {fileID: 66, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF LIGHTMAP_OFF
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_OFF
+          passType: 4
+        - keywords: SHADOWS_DEPTH
+          passType: 8
+    data:
+      first: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP LIGHTMAP_ON
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_OFF
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_ON
+          passType: 4
+    data:
+      first: {fileID: 20, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_OFF
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_ON
+          passType: 4
+    data:
+      first: {fileID: 30, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_ON
+          passType: 4
+    data:
+      first: {fileID: 51, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_OFF
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_ON
+          passType: 4
+        - keywords: SHADOWS_DEPTH
+          passType: 8
+    data:
+      first: {fileID: 102, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 103, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: UNITY_COLORSPACE_GAMMA _SUNDISK_SIMPLE
+          passType: 0
+        - keywords: UNITY_COLORSPACE_GAMMA _SUNDISK_NONE
+          passType: 0
+    data:
+      first: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: FOG_EXP
+          passType: 0
+        - keywords: FOG_EXP2
+          passType: 0
+    data:
+      first: {fileID: 9000, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 9001, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 9002, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 9003, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 10703, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_OFF
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_ON
+          passType: 4
+        - keywords: SHADOWS_DEPTH
+          passType: 8
+    data:
+      first: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: FOG_EXP2
+          passType: 0
+    data:
+      first: {fileID: 10721, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: FOG_EXP2
+          passType: 0
+    data:
+      first: {fileID: 10723, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: FOG_EXP
+          passType: 0
+        - keywords: FOG_EXP2
+          passType: 0
+    data:
+      first: {fileID: 10750, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: FOG_EXP2
+          passType: 0
+    data:
+      first: {fileID: 10751, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: FOG_EXP2
+          passType: 0
+    data:
+      first: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: FOG_EXP2
+          passType: 0
+    data:
+      first: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 10755, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: FOG_EXP2
+          passType: 0
+    data:
+      first: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+        - keywords: UNITY_UI_ALPHACLIP
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: f94fe54abf16b484b8f7db12e957bf42, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: d3904c66f418d2e42a5a4b9266d12a54, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 11286c5980a5fb8448b42564c7f8c136, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+        - keywords: FOG_EXP2
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 1880079c18f9586448a8459ae3126e17, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_OFF
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_ON
+          passType: 4
+    data:
+      first: {fileID: 4800000, guid: 1ba1e2842eef4f84297b9f93fce45bea, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 1d5e5936aac2ee545ade1ec1cda3262f, type: 3}
+      second:
+        variants:
+        - keywords: FOG_EXP2
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 1e2a71e5682ada340b391f1b6d330b56, type: 3}
+      second:
+        variants:
+        - keywords: FOG_EXP
+          passType: 1
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF LIGHTMAP_OFF
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP LIGHTMAP_OFF
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_OFF
+          passType: 4
+        - keywords: SHADOWS_DEPTH
+          passType: 8
+    data:
+      first: {fileID: 4800000, guid: 28f3e648d8fea914bb1ea0adecf458bd, type: 3}
+      second:
+        variants:
+        - keywords: Color_On FOG_EXP2 Fog_On
+          passType: 0
+        - keywords: MatCap_On
+          passType: 0
+        - keywords: FOG_EXP2 MatCap_On
+          passType: 0
+        - keywords: Fog_On MatCap_On
+          passType: 0
+        - keywords: FOG_EXP Fog_On MatCap_On
+          passType: 0
+        - keywords: FOG_EXP2 Fog_On MatCap_On
+          passType: 0
+        - keywords: Color_On FOG_EXP2 Fog_On MatCap_On
+          passType: 0
+        - keywords: Color_On Fog_On MatCap_On _ALPHABLEND_ON
+          passType: 0
+        - keywords: Color_On FOG_EXP2 Fog_On _ALPHATEST_ON
+          passType: 0
+        - keywords: Color_On FOG_EXP2 Fog_On MatCap_On _ALPHATEST_ON
+          passType: 0
+        - keywords: FOG_EXP2 MatCap_On Rim_On
+          passType: 0
+        - keywords: Color_On MatCap_On Rim_On
+          passType: 0
+        - keywords: Color_On FOG_EXP MatCap_On Rim_On
+          passType: 0
+        - keywords: FOG_EXP2 Fog_On MatCap_On Rim_On
+          passType: 0
+        - keywords: Color_On Fog_On MatCap_On Rim_On
+          passType: 0
+        - keywords: Color_On FOG_EXP2 Fog_On MatCap_On Rim_On
+          passType: 0
+        - keywords: Color_On Fog_On MatCap_On Rim_On _ALPHABLEND_ON
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 30385689e1755df43bb5d60fc41ada06, type: 3}
+      second:
+        variants:
+        - keywords: FOG_EXP2
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 31d89acfa9ad19c41a1e96319459d821, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 4c01b87b0026ffc4f8218b419889769e, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_OFF
+          passType: 4
+    data:
+      first: {fileID: 4800000, guid: 5073aca1df10f344790dfcaed882fef5, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_OFF
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_ON
+          passType: 4
+    data:
+      first: {fileID: 4800000, guid: 6cebfe24d1ab99b4292c968b6dda84f1, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 6e6b959cd9b9e1543a7861b1fa1eadb7, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 6ed695d7aa37d0f4fb740a75a66623eb, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 76840267cd7c0e64292ec296b1769b24, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 9fa1dea1e4b5a72469fa1da41b5fe20a, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: a5af361ae391c994c86f3f97bf278f2a, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: b9d725803e2fa0649a45cc36233f455c, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_OFF
+          passType: 4
+    data:
+      first: {fileID: 4800000, guid: bec4c044d5afc0745ba507325a7567ff, type: 3}
+      second:
+        variants:
+        - keywords: FOG_EXP
+          passType: 0
+        - keywords: FOG_EXP2
+          passType: 0
+        - keywords: FOG_EXP Intensity_On
+          passType: 0
+        - keywords: FOG_EXP2 Intensity_On
+          passType: 0
+        - keywords: Color_On FOG_EXP Fog_On Intensity_On
+          passType: 0
+        - keywords: FOG_EXP2 Fog_On UVMove_On
+          passType: 0
+        - keywords: FOG_EXP2 Intensity_On PreMulAlpha_On
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: bec7f95857316e74f942e2adb45f11a5, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_OFF
+          passType: 4
+    data:
+      first: {fileID: 4800000, guid: e3f09075e98950e46a06757006727be6, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: f353b8759a315fa43aba0e6954d5c1ac, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_OFF
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_EXP2 LIGHTMAP_ON
+          passType: 4
+    data:
+      first: {fileID: 4800000, guid: facab48c35513a041a78cb5d7d09cf85, type: 3}
+      second:
+        variants:
+        - keywords: FOG_EXP2
+          passType: 0

@@ -1,0 +1,206 @@
+; FBX 7.1.0 project file
+FBXHeaderExtension:  {
+	FBXHeaderVersion: 1003
+	FBXVersion: 7100
+	CreationTimeStamp:  {
+		Version: 1000
+		Year: 2016
+		Month: 12
+		Day: 11
+		Hour: 13
+		Minute: 47
+		Second: 43
+		Millisecond: 548
+	}
+	Creator: "PIG2FBX by Chipicao"
+}
+
+GlobalSettings:  {
+	Version: 1000
+	Properties70:  {
+		P: "UpAxis", "int", "Integer", "",2
+		P: "UpAxisSign", "int", "Integer", "",1
+		P: "FrontAxis", "int", "Integer", "",1
+		P: "FrontAxisSign", "int", "Integer", "",-1
+		P: "CoordAxis", "int", "Integer", "",0
+		P: "CoordAxisSign", "int", "Integer", "",1
+		P: "OriginalUpAxis", "int", "Integer", "",2
+		P: "OriginalUpAxisSign", "int", "Integer", "",1
+		P: "UnitScaleFactor", "double", "Number", "",100
+		P: "OriginalUnitScaleFactor", "double", "Number", "",1
+	}
+}
+
+Documents:  {
+	Count: 1
+	Document: 1234567890, "", "Scene" {
+		Properties70:  {
+			P: "SourceObject", "object", "", ""
+			P: "ActiveAnimStackName", "KString", "", "", ""
+		}
+		RootNode: 0
+	}
+}
+
+References:  {
+}
+
+Definitions:  {
+	Version: 100
+	ObjectType: "GlobalSettings" {
+		Count: 1
+	}
+	ObjectType: "Model" {
+		Count: 3
+	}
+	ObjectType: "Geometry" {
+		Count: 1
+	}
+	ObjectType: "Material" {
+		Count: 1
+	}
+	ObjectType: "Texture" {
+		Count: 1
+	}
+	ObjectType: "Video" {
+		Count: 1
+	}
+}
+
+Objects:  {
+	Model: 10000, "Model::<root>", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1,1
+			P: "MaxHandle", "int", "Integer", "UH",2
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 10001, "Model::menuNew3_wall", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,-3.1E-05
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1,1
+			P: "MaxHandle", "int", "Integer", "UH",3
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Geometry: 30000, "Geometry::", "Mesh" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.6156863,0.3215686,0.8980392
+		}
+		Vertices: *162 {
+			a: 10.3174,-41.1578,4.77659,10.4369,-33.1807,4.77659,10.3174,-41.1578,0.455091,10.4369,-33.1807,0.45509,10.8314,-25.2312,4.77659,10.8314,-25.2312,0.455089,11.5011,-17.3001,4.77659,11.5011,-17.3001,0.455088,12.4452,-9.39705,4.77659,12.4452,-9.39705,0.455087,13.6625,-1.53141,4.77659,13.6625,-1.53141,0.455086,15.1516,6.28733,4.77659,15.1516,6.28733,0.455085,16.9106,14.0498,4.77658,16.9106,14.0498,0.455084,18.9376,21.7466,4.77658,18.9376,21.7466,0.455083,25.0386,20.0264,4.77658,27.2677,27.4381,4.77658,25.0386,20.0264,0.455083,27.2677,27.4381,0.455082,29.7522,34.768,4.77658,29.7522,34.768,0.455083,-11.8848,-41.1578,2.61584,-11.8436,-41.1578,3.17708,-11.8436,-41.1578,2.0546,-11.6309,-41.1578,1.53547,-11.6309,-41.1578,3.69622,-11.396,-41.1578,4.07939,-11.0516,-41.1578,4.36668,-11.396,-41.1578,1.15229,-11.0516,-41.1578,0.865005,-10.5643,-41.1578,4.63142,-9.97241,-41.1578,4.77659,-10.5659,-41.1578,0.610205,-9.97241,-41.1578,0.455091,-8.57564,-41.1578,4.77659,-8.57564,-41.1578,0.455092,-4.95668,-41.1578,0.455092,-4.95668,-41.1578,4.77659,25.0386,20.0264,0.455083,24.7066,20.12,0.455083,25.0386,20.0264,4.77658,18.9376,21.7466,4.77658,4.95668,-41.1578,0.455092,4.95668,-41.1578,4.77659,8.57564,-41.1578,0.455092,8.57564,-41.1578,4.77659,9.97241,-41.1578,0.455091,9.97241,-41.1578,4.77659,10.3174,-41.1578,4.77659,18.9376,21.7466,0.455083,10.3174,-41.1578,0.455091
+		}
+		PolygonVertexIndex: *132 {
+			a: 0,1,-3,2,1,-4,1,4,-4,3,4,-6,4,6,-6,5,6,-8,6,8,-8,7,8,-10,8,10,-10,9,10,-12,10,12,-12,11,12,-14,12,14,-14,13,14,-16,14,16,-16,15,16,-18,18,19,-21,20,19,-22,19,22,-22,21,22,-24,24,25,-27,26,25,-28,25,28,-28,27,28,-30,27,29,-31,27,30,-32,31,30,-33,30,33,-33,32,33,-35,32,34,-36,35,34,-37,34,37,-37,36,37,-39,38,37,-40,39,37,-41,41,42,-44,43,42,-45,45,46,-48,47,46,-49,47,48,-50,49,48,-51,49,50,-52,42,52,-45,51,53,-50
+		}
+		GeometryVersion: 124
+		LayerElementUV: 0 {
+			Version: 101
+			Name: "UVChannel_1"
+			MappingInformationType: "ByVertice"
+			ReferenceInformationType: "Direct"
+			UV: *108 {
+				a: 7.35964,1.626306,5.98771,1.626305,7.35964,0.373697,5.98771,0.373697,4.61578,1.626305,4.61578,0.373696,3.24385,1.626305,3.24385,0.373696,1.87192,1.626304,1.87192,0.373696,0.499997,1.626304,0.499997,0.373696,-0.871931,1.626304,-0.871931,0.373695,-2.24386,1.626304,-2.24386,0.373695,-3.61579,1.626303,-3.61579,0.373695,-3.61579,1.626303,-4.98771,1.626303,-3.61579,0.373695,-4.98771,0.373694,-6.35964,1.626303,-6.35964,0.373695,4.7286,1.000001,4.72173,1.16268,4.72173,0.837322,4.68629,0.686849,4.68629,1.313154,4.64713,1.424219,4.58973,1.50749,4.64713,0.575783,4.58973,0.492513,4.50852,1.584226,4.40987,1.626306,4.50879,0.418658,4.40987,0.373697,4.17707,1.626306,4.17707,0.373698,3.57391,0.373698,3.57391,1.626306,-0.02824,0.373695,0.02925,0.373695,-0.02824,1.626303,1.02824,1.626303,1.92169,0.373698,1.92169,1.626306,1.31853,0.373698,1.31853,1.626306,1.08573,0.373697,1.08573,1.626306,1.02824,1.626306,1.02824,0.373695,1.02824,0.373697
+			}
+		}
+		LayerElementUV: 1 {
+			Version: 101
+			Name: "UVChannel_2"
+			MappingInformationType: "ByVertice"
+			ReferenceInformationType: "Direct"
+			UV: *108 {
+				a: 0.9961852,0,0.9961852,0,0.9182104,0,0.9182104,0,0.9961852,0,0.9182104,0,0.9961852,0,0.9182104,0,0.9961852,0,0.9182104,0,0.9961852,0,0.9182104,0,0.9961852,0,0.9182104,0,0.9961852,0,0.9182104,0,0.9961852,0,0.9182104,0,0.9961852,0,0.9961852,0,0.9182104,0,0.9182104,0,0.9961852,0,0.9182104,0,0.9571825,0,0.9673147,0,0.9470504,0,0.9376812,0,0.9766839,0,0.9836116,0,0.9887692,0,0.930784,0,0.9255959,0,0.9935606,0,0.9961852,0,0.9209876,0,0.9182104,0,0.9961852,0,0.9182104,0,0.9182104,0,0.9961852,0,0.9182104,0,0.9182104,0,0.9961852,0,0.9961852,0,0.9182104,0,0.9961852,0,0.9182104,0,0.9961852,0,0.9182104,0,0.9961852,0,0.9961852,0,0.9182104,0,0.9182104,0
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+		Layer: 1 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 1
+			}
+		}
+	}
+	Model: 20000, "Model::menuNew3_wall_Material__22386_LOD1", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1,1
+			P: "MaxHandle", "int", "Integer", "UH",4
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Material: 40000, "Material::Material__22386", "" {
+		Version: 102
+		ShadingModel: "phong"
+		MultiLayer: 0
+		Properties70:  {
+		}
+	}
+	Texture: 50000, "Texture::menu_marbleWall_df.tga", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::menu_marbleWall_df.tga"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::menu_marbleWall_df.tga"
+		FileName: "E:\Game_Extra\com.gameloft.android.GAND.GloftA8SS\files\main.sa2.Asphalt8\textures_android\menu_marblewall_df.png"
+		RelativeFilename: "..\textures_android\menu_marblewall_df.png"
+	}
+	Video: 60000, "Video::menu_marbleWall_df.tga", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "E:\Game_Extra\com.gameloft.android.GAND.GloftA8SS\files\main.sa2.Asphalt8\textures_android\menu_marblewall_df.png"
+		}
+		FileName: "E:\Game_Extra\com.gameloft.android.GAND.GloftA8SS\files\main.sa2.Asphalt8\textures_android\menu_marblewall_df.png"
+		RelativeFilename: "..\textures_android\menu_marblewall_df.png"
+	}
+}
+
+Connections:  {
+	C: "OO",10000,0
+	C: "OO",10001,10000
+	C: "OO",20000,10001
+	C: "OO",30000,20000
+	C: "OO",40000,20000
+	C: "OP",50000,40000, "DiffuseColor"
+	C: "OO",60000,50000
+}

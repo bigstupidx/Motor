@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: leaf1
+  m_Shader: {fileID: 4800000, guid: 28f3e648d8fea914bb1ea0adecf458bd, type: 3}
+  m_ShaderKeywords: Fog_On MatCap_On Rim_On _ALPHATEST_ON
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: 2450
+  stringTagMap:
+    RenderType: TransparentCutout
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: b8c2cf5b78e890a48ac05d22a3e2b5a5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: -1}
+    - first:
+        name: _MatCap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _AO
+      second: 2.4
+    - first:
+        name: _BaseLight
+      second: 0.23880596
+    - first:
+        name: _Cull
+      second: 0
+    - first:
+        name: _Cutoff
+      second: 0.672
+    - first:
+        name: _DstBlend
+      second: 0
+    - first:
+        name: _EnableColor
+      second: 0
+    - first:
+        name: _EnableMatCap
+      second: 1
+    - first:
+        name: _EnableRim
+      second: 1
+    - first:
+        name: _Enable_Fog
+      second: 1
+    - first:
+        name: _Intensity
+      second: 1.13
+    - first:
+        name: _Mode
+      second: 1
+    - first:
+        name: _Occlusion
+      second: 20
+    - first:
+        name: _RimPower
+      second: 20.2
+    - first:
+        name: _SquashAmount
+      second: 1
+    - first:
+        name: _SrcBlend
+      second: 1
+    - first:
+        name: _ZWrite
+      second: 1
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 0.80419576, g: 1, b: 0, a: 1}
+    - first:
+        name: _RimColor
+      second: {r: 0.066176474, g: 0.027735727, b: 0.027735727, a: 0.6}
+    - first:
+        name: _Scale
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _TreeInstanceColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _TreeInstanceScale
+      second: {r: 1, g: 1, b: 1, a: 1}

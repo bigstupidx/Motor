@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000011572657342}
+  m_IsPrefabParent: 1
+--- !u!1 &1000011572657342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011854827560}
+  - 114: {fileID: 114000012974220508}
+  - 114: {fileID: 114000011176270356}
+  - 114: {fileID: 114000010807469240}
+  - 114: {fileID: 114000012484247334}
+  - 114: {fileID: 114000010630779790}
+  m_Layer: 0
+  m_Name: Android-Channel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000011854827560
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011572657342}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 236.11838, y: 101.437, z: 352.85013}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114000010630779790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011572657342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9686700d1064bd741b66135d989e20ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 2
+  ChannelSdkPath: Build/Android
+  VersionName: 1.0.15
+  VersionCode: 1015
+  VersionId: 0
+  AESKey: 3b5949e0c26b8776
+  AESIv: 7a4752a276de9570
+  Channels:
+  - Build: 0
+    Name: NoSdk
+  - Build: 1
+    Name: OrbbecTV
+  - Build: 0
+    Name: OrbbecPhone
+  - Build: 0
+    Name: OrbbecPhone-test
+--- !u!114 &114000010807469240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011572657342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa730101c8f1da4a9870b5032723db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 0
+--- !u!114 &114000011176270356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011572657342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0bd87e17310674f864fbadaea24e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 0
+--- !u!114 &114000012484247334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011572657342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a39ac6fc85488640b133d3f2a90851b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 1
+  SdkPath: Build/Android/_Main
+--- !u!114 &114000012974220508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011572657342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa490edbf9f8940249294df2112d38a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BuildTarget: 13
+  BuildPath: Android/Motor
+  BuildOptions: 20000000

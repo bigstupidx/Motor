@@ -1,0 +1,1 @@
+python mkfsm.py -t fsmdotnet.mako -o BikeFSM.cs BikeFSM.fsm

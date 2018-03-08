@@ -1,0 +1,436 @@
+<!DOCTYPE FSM>
+<FSM>
+    <statemachine>
+        <name>BikeFSM</name>
+        <comment></comment>
+        <initialstate>Stand</initialstate>
+        <event>
+            <name>ride</name>
+            <comment></comment>
+        </event>
+        <event>
+            <name>attack</name>
+            <comment></comment>
+        </event>
+        <event>
+            <name>attack_finish</name>
+            <comment></comment>
+        </event>
+        <event>
+            <name>crash</name>
+            <comment></comment>
+        </event>
+        <event>
+            <name>stand</name>
+            <comment></comment>
+        </event>
+        <event>
+            <name>back</name>
+            <comment></comment>
+        </event>
+        <event>
+            <name>reset</name>
+            <comment></comment>
+        </event>
+        <output>
+            <name>OnBackOut</name>
+            <comment></comment>
+        </output>
+        <output>
+            <name>OnCrashIn</name>
+            <comment></comment>
+        </output>
+        <output>
+            <name>OnAttackIn</name>
+            <comment></comment>
+        </output>
+        <output>
+            <name>OnRideIn</name>
+            <comment></comment>
+        </output>
+        <output>
+            <name>OnCrashOut</name>
+            <comment></comment>
+        </output>
+        <output>
+            <name>OnBackIn</name>
+            <comment></comment>
+        </output>
+        <output>
+            <name>OnRideOut</name>
+            <comment></comment>
+        </output>
+        <output>
+            <name>OnAttackOut</name>
+            <comment></comment>
+        </output>
+        <output>
+            <name>OnStandOut</name>
+            <comment></comment>
+        </output>
+        <output>
+            <name>OnStandIn</name>
+            <comment></comment>
+        </output>
+        <state>
+            <name>Attack</name>
+            <comment></comment>
+            <incomeactions>
+                <action type="output">OnAttackIn</action>
+            </incomeactions>
+            <outcomeactions>
+                <action type="output">OnAttackOut</action>
+            </outcomeactions>
+            <transitions>
+                <transition type="simple">
+                    <name>attack_finish</name>
+                    <comment></comment>
+                    <condition>attack_finish</condition>
+                    <destination>Ride</destination>
+                    <transite_destination></transite_destination>
+                    <transitionactions/>
+                </transition>
+                <transition type="simple">
+                    <name>crash</name>
+                    <comment></comment>
+                    <condition>crash</condition>
+                    <destination>Crash</destination>
+                    <transite_destination></transite_destination>
+                    <transitionactions/>
+                </transition>
+            </transitions>
+        </state>
+        <state>
+            <name>Back</name>
+            <comment></comment>
+            <incomeactions>
+                <action type="output">OnBackIn</action>
+            </incomeactions>
+            <outcomeactions>
+                <action type="output">OnBackOut</action>
+            </outcomeactions>
+            <transitions>
+                <transition type="simple">
+                    <name>stand</name>
+                    <comment></comment>
+                    <condition>stand</condition>
+                    <destination>Stand</destination>
+                    <transite_destination></transite_destination>
+                    <transitionactions/>
+                </transition>
+                <transition type="simple">
+                    <name>crash</name>
+                    <comment></comment>
+                    <condition>crash</condition>
+                    <destination>Crash</destination>
+                    <transite_destination></transite_destination>
+                    <transitionactions/>
+                </transition>
+            </transitions>
+        </state>
+        <state>
+            <name>Ride</name>
+            <comment></comment>
+            <incomeactions>
+                <action type="output">OnRideIn</action>
+            </incomeactions>
+            <outcomeactions>
+                <action type="output">OnRideOut</action>
+            </outcomeactions>
+            <transitions>
+                <transition type="simple">
+                    <name>stand</name>
+                    <comment></comment>
+                    <condition>stand</condition>
+                    <destination>Stand</destination>
+                    <transite_destination></transite_destination>
+                    <transitionactions/>
+                </transition>
+                <transition type="simple">
+                    <name>attack</name>
+                    <comment></comment>
+                    <condition>attack</condition>
+                    <destination>Attack</destination>
+                    <transite_destination></transite_destination>
+                    <transitionactions/>
+                </transition>
+                <transition type="simple">
+                    <name>crash</name>
+                    <comment></comment>
+                    <condition>crash</condition>
+                    <destination>Crash</destination>
+                    <transite_destination></transite_destination>
+                    <transitionactions/>
+                </transition>
+            </transitions>
+        </state>
+        <state>
+            <name>Crash</name>
+            <comment></comment>
+            <incomeactions>
+                <action type="output">OnCrashIn</action>
+            </incomeactions>
+            <outcomeactions>
+                <action type="output">OnCrashOut</action>
+            </outcomeactions>
+            <transitions>
+                <transition type="simple">
+                    <name>reset</name>
+                    <comment></comment>
+                    <condition>reset</condition>
+                    <destination>Stand</destination>
+                    <transite_destination></transite_destination>
+                    <transitionactions/>
+                </transition>
+            </transitions>
+        </state>
+        <state>
+            <name>Stand</name>
+            <comment></comment>
+            <incomeactions>
+                <action type="output">OnStandIn</action>
+            </incomeactions>
+            <outcomeactions>
+                <action type="output">OnStandOut</action>
+            </outcomeactions>
+            <transitions>
+                <transition type="simple">
+                    <name>ride</name>
+                    <comment></comment>
+                    <condition>ride</condition>
+                    <destination>Ride</destination>
+                    <transite_destination></transite_destination>
+                    <transitionactions/>
+                </transition>
+                <transition type="simple">
+                    <name>back</name>
+                    <comment></comment>
+                    <condition>back</condition>
+                    <destination>Back</destination>
+                    <transite_destination></transite_destination>
+                    <transitionactions/>
+                </transition>
+                <transition type="simple">
+                    <name>crash</name>
+                    <comment></comment>
+                    <condition>crash</condition>
+                    <destination>Crash</destination>
+                    <transite_destination></transite_destination>
+                    <transitionactions/>
+                </transition>
+            </transitions>
+        </state>
+    </statemachine>
+    <graphics>
+        <class classname="GStateSaver">
+            <meta classname="GSaver">
+                <data classname="GSaver"/>
+            </meta>
+            <data classname="GStateSaver">
+                <qstring name="stateName">Stand</qstring>
+                <QPoint name="position">
+                    <int>5241</int>
+                    <int>5184</int>
+                </QPoint>
+            </data>
+        </class>
+        <class classname="GStateSaver">
+            <meta classname="GSaver">
+                <data classname="GSaver"/>
+            </meta>
+            <data classname="GStateSaver">
+                <qstring name="stateName">Back</qstring>
+                <QPoint name="position">
+                    <int>5116</int>
+                    <int>5186</int>
+                </QPoint>
+            </data>
+        </class>
+        <class classname="GStateSaver">
+            <meta classname="GSaver">
+                <data classname="GSaver"/>
+            </meta>
+            <data classname="GStateSaver">
+                <qstring name="stateName">Crash</qstring>
+                <QPoint name="position">
+                    <int>5112</int>
+                    <int>5484</int>
+                </QPoint>
+            </data>
+        </class>
+        <class classname="GStateSaver">
+            <meta classname="GSaver">
+                <data classname="GSaver"/>
+            </meta>
+            <data classname="GStateSaver">
+                <qstring name="stateName">Attack</qstring>
+                <QPoint name="position">
+                    <int>5373</int>
+                    <int>5275</int>
+                </QPoint>
+            </data>
+        </class>
+        <class classname="GStateSaver">
+            <meta classname="GSaver">
+                <data classname="GSaver"/>
+            </meta>
+            <data classname="GStateSaver">
+                <qstring name="stateName">Ride</qstring>
+                <QPoint name="position">
+                    <int>5393</int>
+                    <int>5183</int>
+                </QPoint>
+            </data>
+        </class>
+        <class classname="GTransitionSaver">
+            <meta classname="GSaver">
+                <data classname="GSaver"/>
+            </meta>
+            <data classname="GTransitionSaver">
+                <qstring name="stateName">Attack</qstring>
+                <int name="transition">0</int>
+                <qvaluelist name="points">
+                    <QPoint>
+                        <int>5435</int>
+                        <int>5236</int>
+                    </QPoint>
+                </qvaluelist>
+            </data>
+        </class>
+        <class classname="GTransitionSaver">
+            <meta classname="GSaver">
+                <data classname="GSaver"/>
+            </meta>
+            <data classname="GTransitionSaver">
+                <qstring name="stateName">Stand</qstring>
+                <int name="transition">0</int>
+                <qvaluelist name="points">
+                    <QPoint>
+                        <int>5341</int>
+                        <int>5169</int>
+                    </QPoint>
+                </qvaluelist>
+            </data>
+        </class>
+        <class classname="GTransitionSaver">
+            <meta classname="GSaver">
+                <data classname="GSaver"/>
+            </meta>
+            <data classname="GTransitionSaver">
+                <qstring name="stateName">Ride</qstring>
+                <int name="transition">0</int>
+                <qvaluelist name="points">
+                    <QPoint>
+                        <int>5337</int>
+                        <int>5214</int>
+                    </QPoint>
+                </qvaluelist>
+            </data>
+        </class>
+        <class classname="GTransitionSaver">
+            <meta classname="GSaver">
+                <data classname="GSaver"/>
+            </meta>
+            <data classname="GTransitionSaver">
+                <qstring name="stateName">Ride</qstring>
+                <int name="transition">1</int>
+                <qvaluelist name="points">
+                    <QPoint>
+                        <int>5383</int>
+                        <int>5230</int>
+                    </QPoint>
+                </qvaluelist>
+            </data>
+        </class>
+        <class classname="GTransitionSaver">
+            <meta classname="GSaver">
+                <data classname="GSaver"/>
+            </meta>
+            <data classname="GTransitionSaver">
+                <qstring name="stateName">Stand</qstring>
+                <int name="transition">1</int>
+                <qvaluelist name="points">
+                    <QPoint>
+                        <int>5191</int>
+                        <int>5180</int>
+                    </QPoint>
+                </qvaluelist>
+            </data>
+        </class>
+        <class classname="GTransitionSaver">
+            <meta classname="GSaver">
+                <data classname="GSaver"/>
+            </meta>
+            <data classname="GTransitionSaver">
+                <qstring name="stateName">Back</qstring>
+                <int name="transition">0</int>
+                <qvaluelist name="points">
+                    <QPoint>
+                        <int>5189</int>
+                        <int>5241</int>
+                    </QPoint>
+                </qvaluelist>
+            </data>
+        </class>
+        <class classname="GTransitionSaver">
+            <meta classname="GSaver">
+                <data classname="GSaver"/>
+            </meta>
+            <data classname="GTransitionSaver">
+                <qstring name="stateName">Attack</qstring>
+                <int name="transition">1</int>
+                <qvaluelist name="points"/>
+            </data>
+        </class>
+        <class classname="GTransitionSaver">
+            <meta classname="GSaver">
+                <data classname="GSaver"/>
+            </meta>
+            <data classname="GTransitionSaver">
+                <qstring name="stateName">Crash</qstring>
+                <int name="transition">0</int>
+                <qvaluelist name="points">
+                    <QPoint>
+                        <int>5176</int>
+                        <int>5329</int>
+                    </QPoint>
+                </qvaluelist>
+            </data>
+        </class>
+        <class classname="GTransitionSaver">
+            <meta classname="GSaver">
+                <data classname="GSaver"/>
+            </meta>
+            <data classname="GTransitionSaver">
+                <qstring name="stateName">Back</qstring>
+                <int name="transition">1</int>
+                <qvaluelist name="points"/>
+            </data>
+        </class>
+        <class classname="GTransitionSaver">
+            <meta classname="GSaver">
+                <data classname="GSaver"/>
+            </meta>
+            <data classname="GTransitionSaver">
+                <qstring name="stateName">Stand</qstring>
+                <int name="transition">2</int>
+                <qvaluelist name="points">
+                    <QPoint>
+                        <int>5200</int>
+                        <int>5352</int>
+                    </QPoint>
+                </qvaluelist>
+            </data>
+        </class>
+        <class classname="GTransitionSaver">
+            <meta classname="GSaver">
+                <data classname="GSaver"/>
+            </meta>
+            <data classname="GTransitionSaver">
+                <qstring name="stateName">Ride</qstring>
+                <int name="transition">2</int>
+                <qvaluelist name="points"/>
+            </data>
+        </class>
+    </graphics>
+</FSM>

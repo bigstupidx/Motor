@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000011112689584}
+  m_IsPrefabParent: 1
+--- !u!1 &1000011112689584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000010203441798}
+  - 114: {fileID: 114000012004696124}
+  - 114: {fileID: 114000013671496304}
+  - 114: {fileID: 114000011627564304}
+  m_Layer: 0
+  m_Name: TestGameCom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000010203441798
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011112689584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114000011627564304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011112689584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89cd91cf2d6086249b6defac303fdb59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentBike: {fileID: 0}
+--- !u!114 &114000012004696124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011112689584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6ba689bd84d5c4e93e4ad91e196631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _asParent: 1
+  Prefabs:
+  - {fileID: 1000010518864598, guid: dd008c1cee71b7a4ebe7f9d5fb99ccee, type: 2}
+  - {fileID: 1000011197873962, guid: 0af7f5dd255e438489f29526e7caf605, type: 2}
+  - {fileID: 1000010725146206, guid: c24d9a13f89bb5d4180c335feef94c1d, type: 2}
+  - {fileID: 1000013760665700, guid: ce9f8b4fec583cd4498d2a6cf139f1f2, type: 2}
+  PrefabsInRes: []
+--- !u!114 &114000013671496304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011112689584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e694e3a972680347bc184934064caa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

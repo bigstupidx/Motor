@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<AppConfig>
+	<AuthorInfo>
+		<Author>作者</Author>
+		<Time>生成时间</Time>
+		<Remark>备注,由于显示的是镜像，因此姿势库中的左右与现实相反</Remark>
+	</AuthorInfo>
+	<Sensor>
+		<Tracker>Orbbec</Tracker>
+		<Mode>Full Body</Mode>
+		<MirrorMode>true</MirrorMode>
+		<Smoothing>true</Smoothing>
+		<SmoothingFactor>0.5</SmoothingFactor>
+		<Correction>0.5</Correction>
+		<Prediction>0.5</Prediction>
+		<Jitter>0.05</Jitter>
+		<Deviation>0.04</Deviation>
+	</Sensor>
+	
+	<!-- 变量可支持的类型有 int,float,vector3-->
+	<IdentfyValues>
+	
+		<Value type="float" name="LHandToElbow"/>
+		
+		<Value type="float" name="LShoulderToElbow"/>
+		
+		<Value type="float" name="LHandLength"/>
+		
+		<Value type="float" name="RHandToElbow"/>
+		
+		<Value type="float" name="RShoulderToElbow"/>
+		
+		<Value type="float" name="RHandLength"/>
+		
+		<Value type="float" name="50PLHandLength"/>
+		
+		<Value type="float" name="80PLHandLength"/>
+		
+		<Value type="float" name="50PRHandLength"/>
+		
+		<Value type="float" name="80PRHandLength"/>
+		
+		<Value type="float" name="-80PRHandLength"/>
+		
+		<Value type="float" name="LHandZDistance"/>
+		
+		<Value type="float" name="RHandZDistance"/>
+		
+		<Value type="vector3" name="LHandToShoulder"/>
+		
+		<Value type="vector3" name="RHandToShoulder"/>
+		
+		<Value type="vector3" name="HeadToTorso"/>
+		
+		<Value type="float" name="BodyXYAngle"/>
+
+		<!--<Value type="vector3" name="LHipToRHip"/>-->
+		
+		<Value type="vector3" name="LShoulderToRShoulder"/>
+		
+		<Value type="vector3" name="Forward"/>
+		
+		<Value type="float" name="ShoulderXZAngle"/>
+		
+		<Value type="float" name="NeckHeight"/>
+		
+		<Value type="float" name="TorsoHeight"/>
+		
+		<Value type="float" name="TorsoVelocity"/>
+		
+		<Value type="float" name="JumpHeight"/>		
+		
+		<Value type="float" name="SquatHeight"/>
+	</IdentfyValues>
+	
+	<!-- 计算下蹲高度和弹跳高度 -->
+	<Processing update="0">
+		
+		<Function name="SET" return="@NeckHeight" value1="@P_Neck.y"/>
+		<Function name="SET" return="@TorsoHeight" value1="@P_Torso.y"/>
+		
+		<Function name="ADD" return="@SquatHeight" value1="@P_Neck.y" value2="@P_Torso.y"/>
+		<Function name="DIV" return="@SquatHeight" value1="@SquatHeight" value2="2"/>
+		
+		<Function name="SUB" return="@JumpHeight" value1="@P_Neck.y" value2="@P_Torso.y"/>
+		<Function name="DIV" return="@JumpHeight" value1="@JumpHeight" value2="2"/>
+		<Function name="ADD" return="@JumpHeight" value1="@JumpHeight" value2="@P_Torso.y"/>
+		
+	</Processing>
+	
+	<!-- 左右手长度计算 -->
+	<Processing update="1">
+		<Function name="Distance" return="@LHandToElbow" value1="@P_LeftHand" value2="@P_LeftElbow"/>
+		<Function name="Distance" return="@LShoulderToElbow" value1="@P_LeftShoulder" value2="@P_LeftElbow"/>
+		<Function name="ADD" return="@LHandLength" value1="@LHandToElbow" value2="@LShoulderToElbow"/>
+		<Function name="Distance" return="@RHandToElbow" value1="@P_RightHand" value2="@P_RightElbow"/>
+		<Function name="Distance" return="@RShoulderToElbow" value1="@P_RightShoulder" value2="@P_RightElbow"/>
+		<Function name="ADD" return="@RHandLength" value1="@RHandToElbow" value2="@RShoulderToElbow"/>
+		<Function name="SUB" return="@LHandZDistance" value1="@P_Torso.z" value2="@P_LeftHand.z"/>
+		<Function name="SUB" return="@RHandZDistance" value1="@P_Torso.z" value2="@P_RightHand.z"/>
+
+		<Function name="SUB" return="@LHandToShoulder" value1="@P_LeftHand" value2="@P_LeftShoulder"/>
+		
+		<Function name="SUB" return="@RHandToShoulder" value1="@P_RightHand" value2="@P_RightShoulder"/>	
+
+		
+		<Function name="MUL" return="@50PLHandLength" value1="@LHandLength" value2="0.5"/>
+		<Function name="MUL" return="@80PLHandLength" value1="@LHandLength" value2="0.8"/>
+		<Function name="MUL" return="@50PRHandLength" value1="@RHandLength" value2="0.5"/>
+		<Function name="MUL" return="@80PRHandLength" value1="@RHandLength" value2="0.8"/>
+		<Function name="MUL" return="@-80PRHandLength" value1="@80PRHandLength" value2="-1.0"/>
+		
+	</Processing>
+	
+	<!-- 计算头到胸的向量 -->
+	<Processing update="1">
+		<Function name="SUB" return="@HeadToTorso" value1="@P_Head" value2="@P_Torso"/>
+		<Function name="ANGLE" return="@BodyXYAngle" value1="@HeadToTorso" value2="1.0,0.0,0.0"/>
+		
+		
+		<Function name="SUB" return="@LShoulderToRShoulder" value1="@P_LeftShoulder" value2="@P_RightShoulder"/>
+		<Function name="SET" return="@LShoulderToRShoulder.y" value1="0.0"/>
+		
+		<Function name="ANGLE" return="@ShoulderXZAngle" value1="@LShoulderToRShoulder" value2="1.0,0.0,0.0"/>
+		
+		<Function name="CROSS" return="@Forward" value1="@HeadToTorso" value2="@LShoulderToRShoulder"/>
+		<Function name="NORMALIZE" return="@Forward" value1="@Forward" />
+		
+			
+		<!--<Function name="SUB" return="@LHipToRHip" value1="@P_LeftHip" value2="@P_RightHip"/>-->
+	
+		<Function name="SET" return="@TorsoVelocity" value1="@V_Torso.y" />
+	</Processing>
+	
+	<!-- 左手向前出拳/掌 -->
+	<Gesture name="LeftAttack">
+		<Segment>
+			<Qualification IsResetOnFailed="1" QualificationEnum="EGreate" value1="@P_LeftHand.y" value2="@P_Torso.y"/>
+			<Qualification IsResetOnFailed="1" QualificationEnum="ELess" value1="@P_LeftHand.y" value2="@P_Head.y"/>
+			
+			<!-- 右手手点靠近肩点（离肩膀位置小于手长50%） -->
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="EGreate" value1="@50PLHandLength" value2="@LHandZDistance"/>
+			
+		</Segment>
+		<Segment>
+			<Qualification IsResetOnFailed="1" QualificationEnum="EGreate" value1="@P_LeftHand.y" value2="@P_Torso.y"/>
+			<Qualification IsResetOnFailed="1" QualificationEnum="ELess" value1="@P_LeftHand.y" value2="@P_Head.y"/>
+		
+			<!-- 右手手点升直（离肩膀位置超过手长80%） -->
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="ELess" value1="@80PLHandLength" value2="@LHandZDistance">
+			</Qualification>
+		</Segment>
+	</Gesture>
+	
+	<!-- 右手向前出拳/掌 -->
+	<Gesture name="RightAttack">
+		<Segment>
+			<Qualification IsResetOnFailed="1" QualificationEnum="EGreate" value1="@P_RightHand.y" value2="@P_Torso.y"/>
+			<Qualification IsResetOnFailed="1" QualificationEnum="ELess" value1="@P_RightHand.y" value2="@P_Head.y"/>
+			
+			<!-- 右手手点靠近肩点（离肩膀位置小于手长50%） -->
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="EGreate" value1="@50PRHandLength" value2="@RHandZDistance">
+			</Qualification>
+		</Segment>
+		<Segment>
+			<Qualification IsResetOnFailed="1" QualificationEnum="EGreate" value1="@P_RightHand.y" value2="@P_Torso.y"/>
+			<Qualification IsResetOnFailed="1" QualificationEnum="ELess" value1="@P_RightHand.y" value2="@P_Head.y"/>
+			
+			<!-- 右手手点升直（离肩膀位置超过手长80%） -->
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="ELess" value1="@80PRHandLength" value2="@RHandZDistance">
+			</Qualification>
+		</Segment>
+	</Gesture>
+	
+	<!-- 左手向前出拳/掌 -->
+	<Gesture name="LeftStrongAttack">
+		<Segment>
+			
+			<Qualification IsResetOnFailed="1" QualificationEnum="ELess" value1="@P_LeftHand.y" value2="@P_Head.y"/>
+			
+			<!-- 右手手点靠近肩点（离肩膀位置小于手长50%） -->
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="EGreate" value1="0.0" value2="@LHandZDistance"/>
+			
+		</Segment>
+		<Segment>
+			<Qualification IsResetOnFailed="1" QualificationEnum="ELess" value1="@SegmentTime" value2="700"/>
+			
+			<Qualification IsResetOnFailed="1" QualificationEnum="EGreate" value1="@P_LeftHand.y" value2="@P_Torso.y"/>
+			<Qualification IsResetOnFailed="1" QualificationEnum="ELess" value1="@P_LeftHand.y" value2="@P_Head.y"/>
+		
+			<!-- 右手手点升直（离肩膀位置超过手长80%） -->
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="ELess" value1="@80PLHandLength" value2="@LHandZDistance">
+			</Qualification>
+		</Segment>
+	</Gesture>	
+	
+<!-- 左手向前出拳/掌 -->
+	<Gesture name="RightStrongAttack">
+		<Segment>
+			
+			<Qualification IsResetOnFailed="1" QualificationEnum="ELess" value1="@P_RightHand.y" value2="@P_Head.y"/>
+			
+			<!-- 右手手点靠近肩点（离肩膀位置小于手长50%） -->
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="EGreate" value1="0.0" value2="@RHandZDistance"/>
+			
+		</Segment>
+		<Segment>
+			<Qualification IsResetOnFailed="1" QualificationEnum="ELess" value1="@SegmentTime" value2="700"/>
+			
+			<Qualification IsResetOnFailed="1" QualificationEnum="EGreate" value1="@P_RightHand.y" value2="@P_Torso.y"/>
+			<Qualification IsResetOnFailed="1" QualificationEnum="ELess" value1="@P_RightHand.y" value2="@P_Head.y"/>
+		
+			<!-- 右手手点升直（离肩膀位置超过手长80%） -->
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="ELess" value1="@80PRHandLength" value2="@RHandZDistance">
+			</Qualification>
+		</Segment>
+	</Gesture>		
+	
+	<!-- 向左倾斜 -->
+	<Gesture name="LeftTilt">
+		<Segment>
+			<!-- 右手手点靠近肩点（离肩膀位置小于手长20%） -->
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="EGreate" value1="@BodyXYAngle" value2="0.0">
+			</Qualification>
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="ELess" value1="@BodyXYAngle" value2="60.0">
+			</Qualification>
+		</Segment>
+	</Gesture>
+	
+	<!-- 向右倾斜 -->
+	<Gesture name="RightTilt">
+		<Segment>
+			<!-- 右手手点靠近肩点（离肩膀位置小于手长20%） -->
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="EGreate" value1="@BodyXYAngle" value2="120.0">
+			</Qualification>
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="ELess" value1="@BodyXYAngle" value2="180.0">
+			</Qualification>
+		</Segment>
+	</Gesture>
+	
+	<!-- 跳跃 -->
+	<Gesture name="Jump">
+		<Segment>
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="ELess" value1="0.75f" value2="@V_Torso.y">
+			</Qualification>
+			
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="ELess" value1="@JumpHeight" value2="@P_Torso.y">
+			</Qualification>
+		</Segment>
+	</Gesture>
+	
+	<!-- 下蹲 -->
+	<Gesture name="Squat">
+		<Segment>
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="ELess" value1="@P_Head.y" value2="@SquatHeight">
+			</Qualification>
+		</Segment>
+	</Gesture>
+
+	<!-- 两手伸开 -->
+	<Gesture name="HandsOutstretched">
+		<Segment>
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="EGreate" value1="@LHandToShoulder.x" value2="@80PLHandLength"/>
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="ELess" value1="@RHandToShoulder.x" value2="@-80PRHandLength"/>
+		</Segment>
+	</Gesture>
+
+	<!-- 左转 -->
+	<Gesture name="LeftTurn">
+		<Segment>
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="EGreate" value1="@ShoulderXZAngle" value2="70.0"/>
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="Greate" value1="@Forward.x" value2="0"/>
+		</Segment>
+	</Gesture>
+	
+	<!-- 右转 -->
+	<Gesture name="RightTurn">
+		<Segment>
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="EGreate" value1="@ShoulderXZAngle" value2="70.0"/>
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="Less" value1="@Forward.x" value2="0"/>
+		</Segment>
+	</Gesture>
+	
+	<!-- 向后划(滑雪) -->
+	<Gesture name="Sking">
+		<Segment>
+		
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="EGreate" value1="@P_LeftHand.y" value2="@P_LeftHip.y"/>
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="Less" value1="@P_LeftHand.z" value2="@P_LeftHip.z"/>
+			
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="EGreate" value1="@P_RightHand.y" value2="@P_RightHip.y"/>
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="Less" value1="@P_RightHand.z" value2="@P_RightHip.z"/>			
+			
+		</Segment>
+		
+		<Segment>
+		
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="Greate" value1="@P_LeftHand.z" value2="@P_LeftHip.z"/>
+			
+			<Qualification IsResetOnFailed="0" IsFinishOnSucceed="0" QualificationEnum="Greate" value1="@P_RightHand.z" value2="@P_RightHip.z"/>			
+			
+		</Segment>
+	</Gesture>
+</AppConfig>

@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: BlackPlastic
+  m_Shader: {fileID: 4800000, guid: e3f09075e98950e46a06757006727be6, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _DetailMap
+      second:
+        m_Texture: {fileID: 2800000, guid: ffa9c02760c2b4e8eb9814ec06c4b05b, type: 3}
+        m_Scale: {x: 50, y: 50}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DiffuseMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MatCapLookup
+      second:
+        m_Texture: {fileID: 2800000, guid: fe310b430db02ab4596480e6af51afb8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _ReflectionMap
+      second:
+        m_Texture: {fileID: 8900000, guid: 8b5e3f0ab0510a64385f5b656728141c, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _DetailMapDepthBias
+      second: 1
+    - first:
+        name: _ReflectionStrength
+      second: 0.23214284
+    m_Colors:
+    - first:
+        name: _BaseColor
+      second: {r: 0.06666667, g: 0.06666667, b: 0.06666667, a: 1}
+    - first:
+        name: _Color
+      second: {r: 0.04477614, g: 0.04477614, b: 0.04477614, a: 0}
+    - first:
+        name: _DetailColor
+      second: {r: 0.13235295, g: 0.13235295, b: 0.13235295, a: 1}
+    - first:
+        name: _DetailMapParams
+      second: {r: 50, g: 50, b: 0.01, a: 1}
+    - first:
+        name: _DiffuseColor
+      second: {r: 0.066176474, g: 0.066176474, b: 0.066176474, a: 0}
+    - first:
+        name: _ReflectionColor
+      second: {r: 0.029411793, g: 0.029411793, b: 0.029411793, a: 0}
+--- !u!1002 &2100001
+EditorExtensionImpl:
+  serializedVersion: 6

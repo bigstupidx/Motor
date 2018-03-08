@@ -1,0 +1,194 @@
+; FBX 7.1.0 project file
+FBXHeaderExtension:  {
+	FBXHeaderVersion: 1003
+	FBXVersion: 7100
+	CreationTimeStamp:  {
+		Version: 1000
+		Year: 2016
+		Month: 12
+		Day: 11
+		Hour: 13
+		Minute: 47
+		Second: 43
+		Millisecond: 33
+	}
+	Creator: "PIG2FBX by Chipicao"
+}
+
+GlobalSettings:  {
+	Version: 1000
+	Properties70:  {
+		P: "UpAxis", "int", "Integer", "",2
+		P: "UpAxisSign", "int", "Integer", "",1
+		P: "FrontAxis", "int", "Integer", "",1
+		P: "FrontAxisSign", "int", "Integer", "",-1
+		P: "CoordAxis", "int", "Integer", "",0
+		P: "CoordAxisSign", "int", "Integer", "",1
+		P: "OriginalUpAxis", "int", "Integer", "",2
+		P: "OriginalUpAxisSign", "int", "Integer", "",1
+		P: "UnitScaleFactor", "double", "Number", "",100
+		P: "OriginalUnitScaleFactor", "double", "Number", "",1
+	}
+}
+
+Documents:  {
+	Count: 1
+	Document: 1234567890, "", "Scene" {
+		Properties70:  {
+			P: "SourceObject", "object", "", ""
+			P: "ActiveAnimStackName", "KString", "", "", ""
+		}
+		RootNode: 0
+	}
+}
+
+References:  {
+}
+
+Definitions:  {
+	Version: 100
+	ObjectType: "GlobalSettings" {
+		Count: 1
+	}
+	ObjectType: "Model" {
+		Count: 3
+	}
+	ObjectType: "Geometry" {
+		Count: 1
+	}
+	ObjectType: "Material" {
+		Count: 1
+	}
+	ObjectType: "Texture" {
+		Count: 1
+	}
+	ObjectType: "Video" {
+		Count: 1
+	}
+}
+
+Objects:  {
+	Model: 10000, "Model::<root>", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1,1
+			P: "MaxHandle", "int", "Integer", "UH",2
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 10001, "Model::menuNew3_haloRays", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",17.2065,18.0674,5.12137
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-141.0002,0.0001951309,75.00004
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1,1
+			P: "MaxHandle", "int", "Integer", "UH",3
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Geometry: 30000, "Geometry::", "Mesh" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.7176471,0.254902,0.2470588
+		}
+		Vertices: *360 {
+			a: -59.722,3.9308,-2.68931,-57.0842,6.13182,1.15183,-61.2749,-0.57319,0.95795,-58.6371,1.62783,4.79909,-59.8841,1.30076,-1.07095,-55.9064,2.67726,2.3225,-60.4985,1.67881,-0.865682,-57.8606,3.87983,2.97546,-59.8149,5.0824,3.62842,-60.3574,-3.36161,8.83947,-62.9952,-5.56263,4.99833,-58.8045,1.14238,5.19221,-61.4423,-1.05864,1.35106,8.56743,-14.6731,11.3007,8.434219,-9.27685,10.993,8.58569,-14.8586,12.0272,8.4923,-9.86679,13.3039,8.55037,-10.4567,15.6148,17.2554,-14.7234,12.4939,17.2267,-14.5382,11.7677,17.1455,-10.1641,15.3502,17.0543,-9.575001,13.0403,16.9631,-8.98592,10.7303,17.198,-14.353,11.0416,14.2151,-14.665,11.8543,14.0427,-9.70179,13.1268,20.2383,-14.4114,11.6812,20.0659,-9.4482,12.9537,-34.4579,-12.7894,9.77533,-33.8327,-7.42632,9.49448,-34.5436,-12.9703,10.4981,-34.1053,-8.00179,11.7937,-34.3778,-8.57726,14.0929,-0.06607,-15.1318,12.8248,-0.063484,-14.9462,12.0981,-0.058482,-10.5439,15.6854,-0.050256,-9.953279,13.374,-0.04203,-9.362659,11.0625,-0.060897,-14.7605,11.3715,-8.734799,-14.9861,12.7068,-8.71137,-14.8008,11.9804,-8.666059,-10.3992,15.5682,-8.591539,-9.80972,13.2577,-8.51702,-9.22021,10.9471,-8.68795,-14.6155,11.2541,-54.5015,-10.1051,8.17793,-53.8535,-5.16568,9.49719,-48.6362,-11.087,8.97295,-47.9881,-6.14759,10.2922,-28.9442,-13.5604,10.976,-28.6117,-8.58149,12.2631,-22.9793,-14.0642,11.3839,-22.6468,-9.085279,12.6711,-17.3918,-14.6071,12.3999,-17.3476,-14.4227,11.6742,-17.262,-10.0229,15.2635,-17.1213,-9.43627,12.9553,-16.9806,-8.84966,10.6471,-17.3034,-14.2383,10.9486,-26.0268,-13.9952,11.9044,-25.9618,-13.8123,11.1799,-25.836,-9.41531,14.7715,-25.6293,-8.83339,12.4671,-25.4225,-8.25146,10.1627,-25.8968,-13.6294,10.4555,-14.1294,-9.607719,13.0941,-14.3557,-14.5942,11.8131,-20.1132,-9.26482,12.8164,-20.3395,-14.2513,11.5354,-59.842,-8.89606,6.62264,-58.8216,-3.61783,6.38344,-59.9788,-9.06953,7.33932,-59.2569,-4.16964,8.663179,-59.6921,-4.72146,10.9429,11.4909,-9.79604,13.2466,11.5843,-14.7878,11.9699,5.49368,-9.93755,13.3612,5.58708,-14.9294,12.0845,-3.06345,-14.9362,12.09,-3.05022,-9.94326,13.3658,
+2.93649,-14.9562,12.1063,2.94972,-9.9633,13.3821,-5.59381,-9.90051,13.3312,-5.71365,-14.8916,12.0539,-11.5893,-9.718929,13.1842,-11.7091,-14.71,11.9069,-51.6955,-10.7712,9.2936,-51.5689,-10.596,8.575439,-51.3237,-6.21392,12.1792,-50.9208,-5.65663,9.8947,-50.5178,-5.09934,7.61023,-51.4422,-10.4208,7.85727,-43.1889,-12.0761,10.3503,-43.0827,-11.8978,9.62961,-42.8771,-7.50974,13.2284,-42.5391,-6.94249,10.9359,-42.2011,-6.37524,8.64333,-42.9764,-11.7195,8.90891,-39.5863,-7.35428,11.2693,-40.1298,-12.3096,9.963079,-45.492,-6.53069,10.6024,-46.0355,-11.486,9.29614,-62.9131,-8.521669,6.91174,-62.1911,-3.62178,8.23559,-57.0446,-9.61739,7.76691,-56.3226,-4.71751,9.09076,-62.8331,-2.93259,3.37996,-62.2187,-3.31064,3.17469,-61.5352,0.092951,7.6688,-59.5809,-1.10962,7.01584,-57.6267,-2.31218,6.36287,-61.6044,-3.68869,2.96942,-31.1359,-8.333839,12.0626,-31.5741,-13.3024,10.767,-37.0747,-7.66975,11.5248,-37.513,-12.6383,10.2292,-61.1128,2.05686,-0.660411,-60.1157,-9.24301,8.056001,-34.6292,-13.1512,11.2209,8.60395,-15.0441,12.7537
+		}
+		PolygonVertexIndex: *216 {
+			a: 0,1,-3,2,1,-4,4,5,-7,6,5,-8,6,7,-9,9,10,-12,11,10,-13,13,14,-16,15,14,-17,15,16,-18,18,19,-21,20,19,-22,21,19,-23,22,19,-24,24,25,-27,26,25,-28,28,29,-31,30,29,-32,30,31,-33,33,34,-36,35,34,-37,36,34,-38,37,34,-39,39,40,-42,41,40,-43,42,40,-44,43,40,-45,45,46,-48,47,46,-49,49,50,-52,51,50,-53,53,54,-56,55,54,-57,56,54,-58,57,54,-59,59,60,-62,61,60,-63,62,60,-64,63,60,-65,65,66,-68,67,66,-69,69,70,-72,71,70,-73,71,72,-74,74,75,-77,76,75,-78,78,79,-81,80,79,-82,82,83,-85,84,83,-86,86,87,-89,88,87,-90,89,87,-91,90,87,-92,92,93,-95,94,93,-96,95,93,-97,96,93,-98,98,99,-101,100,99,-102,102,103,-105,104,103,-106,106,107,-109,108,107,-110,109,107,-111,110,107,-112,112,113,-115,114,113,-116,8,116,-7,73,117,-72,32,118,-31,17,119,-16
+		}
+		GeometryVersion: 124
+		LayerElementUV: 0 {
+			Version: 101
+			Name: "UVChannel_1"
+			MappingInformationType: "ByVertice"
+			ReferenceInformationType: "Direct"
+			UV: *240 {
+				a: 1,0,1,1,0,0,0,1,0,0,0,1,0.5,0,0.5,1,1,1,0,1,0,0,1,1,1,0,0,0,0,1,0.5,0,0.5,1,1,1,1,0,0.5,0,1,1,0.5,1,0,1,0,0,1,0,1,1,0,0,0,1,0,0,0,1,0.5,0,0.5,1,1,1,1,0,0.5,0,1,1,0.5,1,0,1,0,0,1,0,0.5,0,1,1,0.5,1,0,1,0,0,1,0,1,1,0,0,0,1,1,0,1,1,0,0,0,1,1,0,0.5,0,1,1,0.5,1,0,1,0,0,1,0,0.5,0,1,1,0.5,1,0,1,0,0,0,1,0,0,1,1,1,0,0,0,0,1,0.5,0,0.5,1,1,1,0,1,0,0,1,1,1,0,1,0,1,1,0,0,0,1,0,1,0,0,1,1,1,0,1,0,0.5,0,1,1,0.5,1,0,1,0,0,1,0,0.5,0,1,1,0.5,1,0,1,0,0,0,1,0,0,1,1,1,0,1,0,1,1,0,0,0,1,1,0,0.5,0,1,1,0.5,1,0,1,0,0,0,1,0,0,1,1,1,0,1,0,1,0,1,0,1,0
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+		Layer: 1 {
+			Version: 100
+		}
+	}
+	Model: 20000, "Model::menuNew3_haloRays__6_-_Defaultasd_LOD1", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1,1
+			P: "MaxHandle", "int", "Integer", "UH",4
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Material: 40000, "Material::_6_-_Defaultasd", "" {
+		Version: 102
+		ShadingModel: "phong"
+		MultiLayer: 0
+		Properties70:  {
+		}
+	}
+	Texture: 50000, "Texture::Fx_special_godrayIntense.tga", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Fx_special_godrayIntense.tga"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Fx_special_godrayIntense.tga"
+		FileName: "E:\Game_Extra\com.gameloft.android.GAND.GloftA8SS\files\main.sa2.Asphalt8\textures_android\fx_special_godrayintense.png"
+		RelativeFilename: "..\textures_android\fx_special_godrayintense.png"
+	}
+	Video: 60000, "Video::Fx_special_godrayIntense.tga", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "E:\Game_Extra\com.gameloft.android.GAND.GloftA8SS\files\main.sa2.Asphalt8\textures_android\fx_special_godrayintense.png"
+		}
+		FileName: "E:\Game_Extra\com.gameloft.android.GAND.GloftA8SS\files\main.sa2.Asphalt8\textures_android\fx_special_godrayintense.png"
+		RelativeFilename: "..\textures_android\fx_special_godrayintense.png"
+	}
+}
+
+Connections:  {
+	C: "OO",10000,0
+	C: "OO",10001,10000
+	C: "OO",20000,10001
+	C: "OO",30000,20000
+	C: "OO",40000,20000
+	C: "OP",50000,40000, "DiffuseColor"
+	C: "OO",60000,50000
+}
